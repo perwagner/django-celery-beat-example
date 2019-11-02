@@ -18,6 +18,10 @@ Run
 python manage.py migrate
 python manage.py runserver
 ```
+## Start flower
+```
+flower -A beatme --port=5555
+```
 
 # Notes
 * The file report.tasks.py contains the tasks that are being run.  
