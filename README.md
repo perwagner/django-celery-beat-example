@@ -18,3 +18,8 @@ Run
 python manage.py migrate
 python manage.py runserver
 ```
+
+# Notes
+* The file report.tasks.py contains the tasks that are being run.  
+* Use the admin interface to setup the intervals and then periodic tasks.
+* Add `["melco"]` as args to the task being setup to make it appear on the '/' url. This way one can 'filter' specific tasks to be used in the UI.
