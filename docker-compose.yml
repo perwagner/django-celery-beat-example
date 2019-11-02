@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  rabbitmq:
+    container_name: rabbitmq-beat
+    hostname: rabbit
+    image: rabbitmq:3.6.6-management
+    environment:
+        RABBITMQ_DEFAULT_USER: user
+        RABBITMQ_DEFAULT_PASS: user
+    ports:
+        - "5672:5672"
+        - "15672:15672"
+
+  db:
+    container_name: db-beat
+    image: postgres:alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - db-data_beat_schedule:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_USER: user
+      POSTGRES_DB: beatme
+
+volumes:
+  db-data_beat_schedule:
