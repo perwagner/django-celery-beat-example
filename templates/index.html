@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>test</p>
+
+
+<h3>Periodic Tasks</h3>
+<ul>
+{% for task in periodic_tasks %}
+    <li>{{ task }}</li>
+{% endfor %}
+</ul>
+
+
+
+<h3>Interval Schedules</h3>
+<ul>
+{% for interval_schedule in interval_schedules %}
+    <li>{{ interval_schedule }}</li>
+{% endfor %}
+</ul>
+
+
+
+
+
+{% endblock %}
