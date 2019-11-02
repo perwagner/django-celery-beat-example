@@ -121,3 +121,4 @@ STATIC_URL = '/static/'
 
 
 CELERY_BROKER_URL = 'amqp://user:user@localhost:5672'
+CELERY_RESULT_BACKEND = 'amqp://user:user@localhost:5672'
