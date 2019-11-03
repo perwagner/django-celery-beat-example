@@ -3,3 +3,6 @@ venv/
 __cache__/
 
 .vscode/
+
+results.db
+results.sqlite

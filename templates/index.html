@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p>test</p>
-
 
 <h3>Periodic Tasks</h3>
 <ul>
@@ -20,7 +18,11 @@
 {% endfor %}
 </ul>
 
-
+<form action="{% url 'index' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
 
 
 

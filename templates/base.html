@@ -10,6 +10,12 @@
             <h1>Report</h1>
         </div>
 
+        <ul>
+            <li><a href={% url 'index' %}>index</a></li>
+            <li><a href={% url 'alpha' %}>Execute xtasklong</a></li>
+            <li><a href={% url 'beta' %}>Execute xtask (ignore_result=False)</a></li>
+        </ul>
+
     {% block content %}
 
     {% endblock %}
