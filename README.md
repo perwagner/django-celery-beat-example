@@ -23,7 +23,17 @@ python manage.py runserver
 flower -A beatme --port=5555
 ```
 
+## Access rabbitmq gui
+```
+http://localhost:15672
+```
+
 # Notes
 * The file report.tasks.py contains the tasks that are being run.  
 * Use the admin interface to setup the intervals and then periodic tasks.
 * Add `["melco"]` as args to the task being setup to make it appear on the '/' url. This way one can 'filter' specific tasks to be used in the UI.
+
+
+
+# Resources
+* To delete all queues in rabbitmq: https://stackoverflow.com/questions/11459676/delete-all-the-queues-from-rabbitmq
