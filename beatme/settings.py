@@ -124,5 +124,4 @@ CELERY_BROKER_URL = 'amqp://user:user@localhost:5672'
 # CELERY_RESULT_BACKEND = 'amqp://user:user@localhost:5672'
 CELERY_RESULT_BACKEND = 'db+sqlite:///results.sqlite'
 
-CELERY_EVENT_QUEUE_EXPIRES = 120
-CELERY_TASK_RESULT_EXPIRES = 10
+CELERY_RESULT_EXPIRES = 10
